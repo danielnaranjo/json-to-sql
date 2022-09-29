@@ -1,18 +1,41 @@
-# typescript-package-boilerplate
-
-A TypeScript package template to create an NPM library for build, test, lint, auto-format, and release. 
-
+# Project json-to-sql 
+Hey json-to-sql! A fancy description goes here 
 ## First Step 
 Run `node start-here.ts {package name`, for example: 
-```node scripts/start-here.ts danielnaranjo/hello-world```
-
+```node start-here.ts danielnaranjo/hello-world```
 ## Start coding
 Ladies and Gentlemen, you know what to do. 
-
 ## VIP  - Very Important Part 
 Please, follow those steps to [host a private NPM packages](https://andreybleme.com/2020-05-31/hosting-private-npm-packages-for-free/) for free on GitHub. If you did this step, please omit it.
-
 ## To the space and beyond
 Run `npm publish`
+ 
+ ## Usage
 
-Last update: 22/Dec/2021 by [Daniel Naranjo](https://twitter.com/naranjodaniel)
+ ```
+ const data = {
+    id: 1,
+    name: 'test',
+    description: 'long text',
+    user_id: 1,
+    posts: [{
+      id: 1,
+      user_id: 1,
+      date: 65465657,
+      title: 'title',
+      text: 'long text'
+    }],
+    comments: [{
+      id: 1,
+      comment: 'hey ya',
+      post_id: 1,
+    }]
+  };
+ ```
+
+ ```
+console.log(generate(data, 'users', 'http://demo.com?id=2'));
+ ```
+ 
+ 
+Based on [Daniel Naranjo](https://twitter.com/naranjodaniel) starter kit
